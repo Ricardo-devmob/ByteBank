@@ -10,4 +10,8 @@ class ContaPoupanca(
             this.saldo -= valor
         }
     }
+
+    override fun podeTransferir(): Boolean {
+        return true
+    }
 }

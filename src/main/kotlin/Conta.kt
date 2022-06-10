@@ -1,7 +1,7 @@
 abstract class Conta(
     val titular: String,
     val numero: Int
-) {
+): Transferivel {
     var saldo = 0.0
         protected set
 
@@ -15,10 +15,13 @@ abstract class Conta(
     abstract fun saca(valor: Double)
 
     fun transfere(valor: Double, contaDestino: Conta): Boolean {
-        if (saldo >= valor) {
-            saldo -= valor
-            contaDestino.deposita(valor)
-            return true
+        if (podeTransferir()) {
+            if (saldo >= valor) {
+                saldo -= valor
+                contaDestino.deposita(valor)
+                return true
+            }
+            return false
         }
         return false
     }

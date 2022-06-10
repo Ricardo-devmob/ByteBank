@@ -1,4 +1,4 @@
-class ContaCorrente(
+class ContaSalario(
     titular: String,
     numero: Int
 ) : Conta(
@@ -6,13 +6,13 @@ class ContaCorrente(
     numero
 ) {
     override fun saca(valor: Double) {
-        val valorComTaxa = valor + 0.1
-        if (this.saldo >= valorComTaxa){
-            this.saldo -= valorComTaxa
+        if (this.saldo >= valor){
+            this.saldo -= valor
         }
     }
 
     override fun podeTransferir(): Boolean {
-        return true
+        println("Está conta não permite transferencias")
+        return false
     }
 }
