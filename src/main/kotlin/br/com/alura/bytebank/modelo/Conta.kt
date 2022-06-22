@@ -6,6 +6,14 @@ abstract class Conta(
 ) {
     var saldo = 0.0
         protected set
+    companion object{
+        var total = 0
+        private set
+    }
+    init {
+        println("Criando conta")
+        total++
+    }
 
 
     fun deposita(valor: Double) {

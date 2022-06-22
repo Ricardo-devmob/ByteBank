@@ -1,3 +1,4 @@
+import br.com.alura.bytebank.modelo.Conta
 import br.com.alura.bytebank.modelo.ContaCorrente
 import br.com.alura.bytebank.modelo.ContaSalario
 
@@ -56,5 +57,6 @@ fun testaComportamentosConta() {
     contaSalario.deposita(500.0)
     println("saldo = ${contaSalario.saldo}")
     contaSalario.transfere(200.0, contaAlex)
+    println("total de contas criadas: ${Conta.total}")
 
 }

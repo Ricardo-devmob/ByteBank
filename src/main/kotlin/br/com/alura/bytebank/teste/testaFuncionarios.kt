@@ -1,7 +1,4 @@
-import br.com.alura.bytebank.modelo.Analista
-import br.com.alura.bytebank.modelo.CalculadoraBonificacao
-import br.com.alura.bytebank.modelo.Diretor
-import br.com.alura.bytebank.modelo.Gerente
+import br.com.alura.bytebank.modelo.*
 
 fun testaFuncionarios() {
     val alex = Analista(
@@ -18,7 +15,8 @@ fun testaFuncionarios() {
         nome = "Fran",
         cpf = "222.222.222-22",
         salario = 2000.0,
-        senha = 1234
+        senha = 1234,
+        endereco = Endereco()
     )
 
     println("nome ${fran.nome}")
@@ -37,7 +35,8 @@ fun testaFuncionarios() {
         cpf = "333.333.333-33",
         salario = 4000.0,
         senha = 4000,
-        plr = 200.0
+        plr = 200.0,
+        endereco = Endereco()
     )
 
     println("nome ${gui.nome}")
