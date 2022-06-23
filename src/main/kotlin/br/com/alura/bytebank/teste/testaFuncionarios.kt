@@ -6,6 +6,7 @@ fun testaFuncionarios() {
         cpf = "111.111.111-11",
         salario = 1000.0
     )
+
     println("nome ${alex.nome}")
     println("cpf ${alex.cpf}")
     println("salario ${alex.salario}")
@@ -15,8 +16,7 @@ fun testaFuncionarios() {
         nome = "Fran",
         cpf = "222.222.222-22",
         salario = 2000.0,
-        senha = 1234,
-        endereco = Endereco()
+        senha = 1234
     )
 
     println("nome ${fran.nome}")
@@ -25,9 +25,9 @@ fun testaFuncionarios() {
     println("bonificação ${fran.bonificacao}")
 
     if (fran.autentica(1234)) {
-        println("Autenticou com sucesso")
+        println("autenticou com sucesso")
     } else {
-        println("Falha na autenticação")
+        println("falha na autenticação")
     }
 
     val gui = Diretor(
@@ -35,8 +35,7 @@ fun testaFuncionarios() {
         cpf = "333.333.333-33",
         salario = 4000.0,
         senha = 4000,
-        plr = 200.0,
-        endereco = Endereco()
+        plr = 200.0
     )
 
     println("nome ${gui.nome}")
@@ -46,9 +45,9 @@ fun testaFuncionarios() {
     println("plr ${gui.plr}")
 
     if (gui.autentica(4000)) {
-        println("Autenticou com sucesso")
+        println("autenticou com sucesso")
     } else {
-        println("Falha na autenticação")
+        println("falha na autenticação")
     }
 
     val maria = Analista(
