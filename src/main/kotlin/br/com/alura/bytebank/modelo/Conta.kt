@@ -4,9 +4,9 @@ import br.com.alura.bytebank.exception.FalhaAutenticacaoException
 import br.com.alura.bytebank.exception.SaldoInsuficienteException
 
 abstract class Conta(
-    var titular: Cliente,
+    val titular: Cliente,
     val numero: Int
-) : Autenticavel {
+) : Autenticavel by titular {
     var saldo = 0.0
         protected set
 
