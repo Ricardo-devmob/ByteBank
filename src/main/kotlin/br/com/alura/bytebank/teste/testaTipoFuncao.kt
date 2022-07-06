@@ -37,8 +37,8 @@ fun testaTipoFuncaoClasse() {
 }
 
 fun testeTipoFuncaoReferencia() {
-    val minhaFuncao = ::soma
-    println(minhaFuncao(5, 10))
+//    val minhaFuncao = ::soma
+//    println(minhaFuncao(5, 10))
 }
 
 fun soma(a: Int, b: Int) : Int {
